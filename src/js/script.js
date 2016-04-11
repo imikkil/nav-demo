@@ -5,7 +5,8 @@ function navigationFunction(){
         || (navigator.userAgent.match(/iPod/i))
         || (navigator.userAgent.match(/iPad/i))
     ){
-         window.open("maps://maps.google.com/maps?daddr=60.170404, 24.941284999999993&amp;ll=");
+		//The key difference between iOS and Android is the maps:-protocol. iOS should intercept this and launch apple maps. Does not reliably work on Android however.
+        window.open("maps://maps.google.com/maps?daddr=60.170404, 24.941284999999993&amp;ll=");
     //Lumia / other Nokia phones
     }else if( (navigator.userAgent.match(/NOKIA/))
           || (navigator.userAgent.match(/iemobile/i))
